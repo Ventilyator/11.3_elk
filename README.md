@@ -23,7 +23,9 @@
 ---
 
 ### Задание 1
-`![alt text](https://github.com/Ventilyator/11.3_elk/tree/main/img/1.png)`
+
+---
+`![alt text](https://github.com/Ventilyator/11.3_elk/blob/main/img/1.png)`
 ---
 
 ### Задание 2
