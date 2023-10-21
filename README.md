@@ -10,15 +10,19 @@
 
 ### Задание 2
 
-
+---
 ![alt text](https://github.com/Ventilyator/11.3_elk/blob/main/img/2.png)
-
 ---
 
 ### Задание 3
----
-### Задание 4
----
-## Дополнительные задания (со звездочкой*)
 
-### Задание 5
+---
+![alt text](https://github.com/Ventilyator/11.3_elk/blob/main/img/3.png)
+---
+
+### Задание 4
+
+---
+![alt text](https://github.com/Ventilyator/11.3_elk/blob/main/img/4.png)
+---
+
