@@ -5,7 +5,7 @@
 ### Задание 1
 
 ---
-![alt text](https://github.com/ovchinnikov-homework-netology/blob/main/11.3_elk/img/1.png)
+![alt text](https://github.com/Ventilyator/ovchinnikov-homework-netology/blob/main/11.3_elk/img/1.png)
 ---
 
 ### Задание 2
