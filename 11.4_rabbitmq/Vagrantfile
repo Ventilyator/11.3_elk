@@ -1,0 +1,84 @@
+VAGRANTFILE_API_VERSION = "2"
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+
+  config.vm.define 'rabbitmq-1' do | p |
+    p.vm.box = 'generic/ubuntu2304'
+    p.vm.host_name = 'rabbitmq-1'
+
+      p.vm.provider :vmware_esxi do |res|
+        #  REQUIRED!  ESXi hostname/IP
+        res.esxi_hostname = '192.168.110.200'
+        #  ESXi username
+        res.esxi_username = 'root'
+        #  IMPORTANT!  Set ESXi password.
+        #    1) 'prompt:'
+        #    2) 'file:'  or  'file:my_secret_file'
+        #    3) 'env:'  or 'env:my_secret_env_var'
+        #    4) 'key:'  or  key:~/.ssh/some_ssh_private_key'
+        #    5) or esxi.esxi_password = 'my_esxi_password'
+        res.esxi_password = 'prompt:'
+        #  SSH port.
+        res.esxi_hostport = 22
+        #  OPTIONAL.  When automatically naming VMs, use this prefix.
+        res.guest_name_prefix = 'v-'
+        #  OPTIONAL.  Set the guest username login.  The default is 'vagrant'.
+        res.guest_username = 'dvovchinnikov'
+        #  OPTIONAL.  Memory size override
+        res.guest_memsize = '4096'
+        #  OPTIONAL.  Virtual CPUs override
+        res.guest_numvcpus = '2'
+        #  OPTIONAL. Boot disk size.
+        #    If unspecified, the boot disk size will be the same as the original
+        #    box.  You can specify a larger boot disk size in GB.  The extra disk space
+        #    will NOT automatically be available to your OS.  You will need to
+        #    create or modify partitions, LVM and/or filesystems.
+        #res.guest_boot_disk_size = 15
+        #  OPTIONAL.  Create additional storage for guests.
+        #    You can specify an array of up to 13 virtual disk sizes (in GB) that you
+        #    would like the provider to create once the guest has been created.  You
+        #    can optionally specify the size and datastore using a hash.
+        #res.guest_storage = 10
+      end
+  end
+
+  config.vm.define "rabbitmq-2" do | b |
+    b.vm.box = 'generic/ubuntu2304'
+    b.vm.host_name = "rabbitmq-2"
+ 
+      b.vm.provider :vmware_esxi do |res|
+        #  REQUIRED!  ESXi hostname/IP
+        res.esxi_hostname = '192.168.110.200'
+        #  ESXi username
+        res.esxi_username = 'root'
+        #  IMPORTANT!  Set ESXi password.
+        #    1) 'prompt:'
+        #    2) 'file:'  or  'file:my_secret_file'
+        #    3) 'env:'  or 'env:my_secret_env_var'
+        #    4) 'key:'  or  key:~/.ssh/some_ssh_private_key'
+        #    5) or esxi.esxi_password = 'my_esxi_password'
+        res.esxi_password = 'prompt:'
+        #  SSH port.
+        res.esxi_hostport = 22
+        #  OPTIONAL.  When automatically naming VMs, use this prefix.
+        res.guest_name_prefix = 'v-'
+        #  OPTIONAL.  Set the guest username login.  The default is 'vagrant'.
+        res.guest_username = 'dvovchinnikov'
+        #  OPTIONAL.  Memory size override
+        res.guest_memsize = '2048'
+        #  OPTIONAL.  Virtual CPUs override
+        res.guest_numvcpus = '2'
+        #  OPTIONAL. Boot disk size.
+        #    If unspecified, the boot disk size will be the same as the original
+        #    box.  You can specify a larger boot disk size in GB.  The extra disk space
+        #    will NOT automatically be available to your OS.  You will need to
+        #    create or modify partitions, LVM and/or filesystems.
+        #res.guest_boot_disk_size = 15
+        #  OPTIONAL.  Create additional storage for guests.
+        #    You can specify an array of up to 13 virtual disk sizes (in GB) that you
+        #    would like the provider to create once the guest has been created.  You
+        #    can optionally specify the size and datastore using a hash.
+        #res.guest_storage = 10
+      end
+  end        
+end
