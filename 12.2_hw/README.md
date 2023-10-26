@@ -8,6 +8,8 @@
 ![alt text](https://github.com/Ventilyator/ovchinnikov-homework-netology/blob/main/12.2_hw/img/1.1.png)
 
 ![alt text](https://github.com/Ventilyator/ovchinnikov-homework-netology/blob/main/12.2_hw/img/1.2.png)
+
+![alt text](https://github.com/Ventilyator/ovchinnikov-homework-netology/blob/main/12.2_hw/img/1.3.png)
 ---
 
 ```
